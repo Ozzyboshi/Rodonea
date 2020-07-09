@@ -1,0 +1,116 @@
+
+                                  huffman
+                                  -------
+          Documentation for version 1.0, on September 11th, 1991
+
+                      by Bruno Costa and Lucia Darsa
+
+
+
+WARNING
+
+  Although  this  program  is freely distributable (see COPYRIGHT below), I
+would  appreciate  if  you  take the time to write me a line or two (E-Mail
+please)  if  you  are  using  any of my programs or if you have any kind of
+ideas  or  suggestions  (This is not too much to ask, is it?).  If you feel
+particularly  generous,  I  would  like  to  receive a disk with any useful
+programs you have written, preferrably with source.  Thanks!
+
+
+DESCRIPTION
+
+  Huffman  is  a  (not so) simple program to compress files, using the well
+known  huffman  coding  algorithm.  The compression ratios achieved by this
+method  are worse than those obtained by compress, arc, lharc, zoo, zip and
+many  others,  but at least you have the source code ;-).  Huffman has been
+ported  easily  to  MeSsy-DOS  and UNIX, and can be used as a simple way to
+compress  files to be transferred between different systems, over which you
+have  control  (to  remove  bugs or add features).  Huffman works perfectly
+under  AmigaDOS  1.3,  but  under  2.0  you  must disable fast memory using
+NoFastMem  (don't  ask  me why!), as is necessary to run PKAZIP.  Note that
+this  was  tested in an Amiga 3000 under Kickstart v36.209, with burst mode
+and caches turned either on or off.
+
+
+OPTIONS
+
+  usage: huffman [-c | -u | -r] [-f | <files>...]
+
+  You  must select one and only one of the 'c', 'u' or 'r' options.  Option
+'c'  makes  huffman compress the given files, and 'u' is used to uncompress
+them.  To just estimate the compression ratio, use 'r'.
+
+  Option 'f' is used to make huffman work as a filter (not implemented).
+
+  You may give as many files as you wish, huffman will compress each one in
+turn, and if the compression is successful, it will replace the old file
+with the compressed one, keeping the same name.
+
+
+EXAMPLES
+
+  To compress some files:
+
+  > huffman -c foo.c bar.c test
+  foo.c (38.2%)
+  bar.c (33.1%)
+  test (27.6%)
+
+  To uncompress them:
+
+  > huffman -u foo.c bar.c test
+
+  To estimate the compression ratio:
+
+  > huffman -r foo.c bar.c test
+  foo.c (38.2%)
+  bar.c (33.1%)
+  test (27.6%)
+
+
+BUGS
+
+  Does not work perfectly under WB 2.0, v36.209.
+
+  Option 'f' (filter mode) not implemented yet. Note that due to nature of
+the huffman algorithm, it is necessary to read the input file two times,
+one to determine the codification, and one to really compress. This makes
+necessary to buffer the standard input to be able to re-read it later.
+
+  Although the program does compress both text and binary files, and
+does not seem to fail in any of the tests made with it, it has not been
+tested in extreme conditions. Since the program destroys the original file
+when compressing or decompressing, care should be taken.
+
+
+AUTHORS
+
+  The  accompanying  program  and  this documentation were written by Bruno
+Costa and Lucia Darsa.  They can be reached in the following ways:
+
+  E-Mail: bruno@brlncc.bitnet (InterNet)
+          bruno@BRLNCC        (BitNet)
+
+  Mail:   Bruno Costa
+          Rua Almirante Guilhem 454/102 bloco 1
+          Leblon - Rio de Janeiro
+          RJ 22440
+          BRAZIL
+
+
+COPYRIGHT
+
+  This  program  is  copyrighted by Bruno Costa and Lucia Darsa.  It may be
+freely  distributed  if  and only if the source code, the documentation and
+the  executables  are  provided  in  original  form.  It may be included in
+Public  Domain/Shareware compilations, like the one organized by Fred Fish,
+as  long as just a nominal fee is charged for each disk (no more than US$10
+per  disk),  and may also be uploaded to BBS's or network services like BIX
+and CompuServe.
+
+
+DISCLAIMER
+
+  The authors make no warranty of any kind with respect to this product and
+explicitly  disclaim  any  implied warranties of merchantability or fitness
+for any particular purpose.

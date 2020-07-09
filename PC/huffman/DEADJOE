@@ -1,0 +1,38 @@
+
+*** These modified files were found in JOE when it aborted on Mon Jun 15 16:54:45 2020
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+dd
+mount
+fulldo
+scaler
+cycles
+processbloc
+chip
+memall
+backli
+mediaprox
+fout
+uncompress_file
+decode_stream
+fout
+
+*** File '(Unnamed)'
+.ssh/config
+.ssh/config
+.ssh/config
+clouditalia.xml
+makefile
+test
+test
+uffman2.c
+huffman.c
+uffman2
+uffman2.c
+
+*** File '* Startup Log *'
+Processing '/etc/joe/joerc'...
+Processing '/etc/joe/ftyperc'...
+Finished processing /etc/joe/ftyperc
+Finished processing /etc/joe/joerc
